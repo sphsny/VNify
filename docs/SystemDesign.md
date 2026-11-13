@@ -10,6 +10,7 @@ The following technologies were chosen with performance, customisation and maint
 - [TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html): programming language based on JavaScript with improved type safety
 - [Vite](https://vite.dev/guide/): fast development server
 - [Tailwind v4](https://tailwindcss.com/docs/installation/using-vite): CSS framework with built-in utility classes for customisation, animations, etc.
+- [shadcn/ui](https://ui.shadcn.com/docs): collection of pre-built React components
 
 ## Backend
 - [FastAPI](fastapi.tiangolo.com): web framework for building APIs with Python, very fast performance
@@ -36,3 +37,8 @@ npm run dev
 ```
 Checkpoint: Get started page displayed in localhost
 
+1.2. Add Tailwind CSS & shadcn/ui
+
+- Following this [Installation manual](https://ui.shadcn.com/docs/installation/vite)
+
+Checkpoint: Display styled Button in App.tsx
