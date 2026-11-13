@@ -28,7 +28,7 @@ The following technologies were chosen with performance, customisation and maint
 
 # Repository Set Up 
 
-1. Frontend:
+1. Frontend: Vite + React + TS
 ```
 npm create vite@latest frontend -- --template react-ts
 cd frontend
@@ -42,3 +42,24 @@ Checkpoint: Get started page displayed in localhost
 - Following this [Installation manual](https://ui.shadcn.com/docs/installation/vite)
 
 Checkpoint: Display styled Button in App.tsx
+
+1.3 Add Dexie.js and vitest
+
+```
+npm install dexie dexie-react-hooks
+npm install -D vitest
+```
+
+2. Backend: FastAPI + UV + main.py test
+Following this [Installation manual & official GitHub repository](https://github.com/fastapi/fastapi) 
+```
+uv init --app backend
+cd backend
+uv add "fastapi[standard]" "pyjwt[crypto]"
+uv add --dev ruff mypy pytest
+```
+Checkpoints:
+- `uv run fastapi dev app/main.py` server running on localhost:8000, /docs displaying API routes
+- `uv run pytest` tests passed
+- `uv run ruff check .` checks passed
+- `uv run mypy app` no issues found
