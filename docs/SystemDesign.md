@@ -63,3 +63,15 @@ Checkpoints:
 - `uv run pytest` tests passed
 - `uv run ruff check .` checks passed
 - `uv run mypy app` no issues found
+
+3. Connect frontend and backend
+
+- vite.config.ts: add localhost:8000 server connection to proxy, forwarding the /api/* requests as / so they match the FastAPI routes
+- client.ts: fetch backend root (GET request) through proxy
+- App.tsx: trigger getMessage() function from client.ts (calling GET /api/)
+
+Terminal 1: `cd backend && uv run fastapi dev app/main.py`
+Terminal 2: `cd frontend && npm run dev`
+
+Checkpoint:
+- App.tsx displays backend response (Hello World) in browser
