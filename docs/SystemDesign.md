@@ -75,3 +75,7 @@ Terminal 2: `cd frontend && npm run dev`
 
 Checkpoint:
 - App.tsx displays backend response (Hello World) in browser
+
+## Tools
+
+- GitHub CI: build and test frontend and backend on each push
