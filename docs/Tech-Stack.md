@@ -6,11 +6,13 @@ The following technologies were chosen with performance, customisation and maint
 
 ## Frontend
 
-- [React](https://react.dev/learn): UI library using components for dynamic, high performance applications
+- [React](https://react.dev/learn): JavaScript library controlling the UI via components, props and state for dynamic, high performance applications
 - [TypeScript](https://www.typescriptlang.org/docs/handbook/intro.html): programming language based on JavaScript with improved type safety
 - [Vite](https://vite.dev/guide/): fast development server
-- [Tailwind v4](https://tailwindcss.com/docs/installation/using-vite): CSS framework with built-in utility classes for customisation, animations, etc.
-- [shadcn/ui](https://ui.shadcn.com/docs): collection of pre-built React components
+- [Tailwind v4](https://tailwindcss.com/docs/installation/using-vite): CSS framework with built-in utility classes for component appearance, customisation, animations, etc. via className
+- [shadcn/ui](https://ui.shadcn.com/docs): collection of pre-built components built from React, Tailwind and Base UI
+- [Lucide](https://lucide.dev/icons/): open-source icon library, used through React
+- [Kaomojis](https://emojicombos.com/text-decoration): text decorations
 
 ## Backend
 - [FastAPI](fastapi.tiangolo.com): web framework for building APIs with Python, very fast performance
