@@ -28,6 +28,8 @@ export function Sidebar({ side, sections }: SidebarProps) {
       className={[
         // animation
         'flex shrink-0 flex-col overflow-hidden transition-[width] duration-200',
+        // background, so that the background is rendered behind it
+        'relative z-10 bg-background',
         side === 'left' ? 'border-r border-border' : 'border-l border-border',
         open ? OPEN_WIDTH : 'w-14',
       ].join(' ')}

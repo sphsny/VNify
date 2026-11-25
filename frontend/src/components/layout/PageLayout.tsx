@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { cn } from '@/lib/utils'
 import { Sidebar } from './Sidebar'
 import type { SidebarSection } from './Sidebar'
 
@@ -8,17 +9,19 @@ import type { SidebarSection } from './Sidebar'
 interface PageLayoutProps {
   left: SidebarSection[]
   right?: SidebarSection[]
+  scene?: boolean
   children: ReactNode
 }
 
-// main panel expands when sidebars collapse, but textbox/backlog stays fixed
-export function PageLayout({ left, right, children }: PageLayoutProps) {
+export function PageLayout({ left, right, scene, children }: PageLayoutProps) {
   return (
-    <div className="flex min-h-0 flex-1">
+  /* vn scene background */
+    <div className={cn('flex min-h-0 flex-1', scene && 'vn-bg')}>
+      {/* left sidebar */}
       <Sidebar side="left" sections={left} />
-
-      <main className="min-w-0 flex-1 overflow-y-auto p-6">{children}</main>
-
+      {/* main container, content added by each page */}
+      <main className="min-w-0 flex-1 overflow-y-auto">{children}</main>
+      {/* right sidebar */}
       {right && <Sidebar side="right" sections={right} />}
     </div>
   )

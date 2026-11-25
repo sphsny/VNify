@@ -1,11 +1,20 @@
 /* shadcnui theme designed via https://tweakcn.com/themes/cmwipp5s0000504kue6oletlv */
+/* index.css same as global.css */
+/* animations: https://design.dev/guides/css-animations/ */
 
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+
+/* fonts from google used via @fontsource */
 @import "@fontsource/convergence";
 @import "@fontsource/antic-slab";
 @import "@fontsource/space-mono";
+@import "@fontsource-variable/arimo";
+@import "@fontsource-variable/shantell-sans";
+@import "@fontsource-variable/saira";
+@import "@fontsource-variable/quicksand";
+@import "@fontsource-variable/maven-pro";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -207,4 +216,109 @@
   html {
     @apply font-sans;
     }
+}
+
+@layer components {
+  /* the --vn-* values get applied by applyTextBoxSettings() */
+  /* DEFAULT values defined in settings.ts */
+  /* colours via color-mix */
+  /* stage area behind the textbox (accepts imported image) */
+  .vn-bg {
+    position: relative;
+    --vn-scene-tint: color-mix(in srgb, var(--vn-scene-color) var(--vn-scene-opacity), transparent);
+    background-image: linear-gradient(var(--vn-scene-tint), var(--vn-scene-tint)), var(--vn-scene-image, none);
+    background-size: cover; /* smallest size that covers the entire area */
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* textbox */
+  .vn-textbox {
+    position: relative;
+    background-color: color-mix(in srgb, var(--vn-bg-color) var(--vn-bg-opacity), transparent);
+    border: var(--vn-border-width) solid var(--vn-border-color);
+    border-radius: var(--vn-border-radius);
+  }
+
+  /* text */
+  .vn-text {
+    font-family: var(--vn-font);
+    font-size: var(--vn-font-size);
+    font-weight: var(--vn-font-weight);
+    line-height: var(--vn-line-height);
+    letter-spacing: var(--vn-letter-spacing);
+    color: var(--vn-text-color);
+    text-shadow: var(--vn-text-shadow);
+  }
+
+  /* text reveal, one character at a time, delay calculated via index --i, https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation */ 
+  .vn-char {
+    animation: vn-reveal 200ms ease-out both;
+    animation-delay: calc(var(--i) * var(--vn-char-delay));
+  }
+
+  /* left-to-right animation using opacity https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@keyframes */
+  @keyframes vn-reveal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* ensure words wrap in the textbox, so no letters are left alone */
+  .vn-word {
+    white-space: nowrap;
+  }
+
+  /* a line that has been already read shows without replaying the animation */
+  .vn-instant .vn-char {
+    animation: none;
+  }
+
+  /* vertical letter spacing for stacking lines in NVL mode */
+  .vn-text p + p {
+    margin-top: calc(var(--vn-line-height) * 0.4em);
+  }
+
+  /* lines that have been read are dimmed, behind the active line */
+  .vn-past {
+    opacity: 0.65;
+  }
+
+  /* chapter tag, top left of text box */
+  .vn-chapter {
+    position: absolute;
+    top: calc(var(--spacing) * -3);
+    left: calc(var(--spacing) * 3);
+    padding-inline: calc(var(--spacing) * 2);
+    background-color: color-mix(in srgb, var(--vn-chapter-bg-color) var(--vn-chapter-bg-opacity), transparent);
+    color: var(--vn-chapter-color);
+    border: var(--vn-border-width) solid var(--vn-border-color);
+    border-radius: var(--vn-border-radius);
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* click-to-continue indicator, bottom right of text box */
+  .vn-ctc {
+    position: absolute;
+    right: calc(var(--spacing) * 3);
+    bottom: calc(var(--spacing) * 2);
+    color: var(--vn-text-color);
+    animation: vn-move 1.4s ease-in-out infinite;
+  }
+
+  /* little moving animation for the ctc going up and down :p */
+  @keyframes vn-move {
+    0%, 100% { transform: translateY(0); opacity: 0.55; }
+    50% { transform: translateY(2px); opacity: 1; }
+  }
+
+  /* disable animation on browsers that prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .vn-ctc,
+    .vn-char {
+      animation: none;
+    }
+  }
 }

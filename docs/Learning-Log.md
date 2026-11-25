@@ -50,6 +50,13 @@ Sprint 2
 1. Create context
 2. Use the context from the component that needs the data
 3. Provide the context from the component that specifies the data
+- [useEffect](https://dev.to/harini_magesh_fa40041cf8d/useeffect-in-react-1bd8)
+    - run only once on mount
+    - run when state changes
+    - run on every render
+- [useRef](https://react.dev/reference/react/useRef)
+    - value persists for the lifetime of the component
+    - value doesn't change on re-render
 - [Custom Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks)
     - in-built hooks: useState, useContext, useEffect
     - custom hooks e.g. for fetching data or keeping track of a state
@@ -67,6 +74,12 @@ Sprint 2
 - [AppShell](https://v1.skeleton.dev/components/app-shell) -> app layout inspiration
 - [shadcn/ui cheatsheet](https://shadcnstore.com/docs/cheatsheet)
 - [shadcn/ui components](https://ui.shadcn.com/docs/components)
+    - [Item](https://ui.shadcn.com/docs/components/base/item)
+    - [Scroll Area](https://ui.shadcn.com/docs/components/base/scroll-area)
+    - [Resizable](https://ui.shadcn.com/docs/components/base/resizable)
+    - [Progress](https://ui.shadcn.com/docs/components/base/progress)
+    - [Separator](https://ui.shadcn.com/docs/components/base/separator)
+    - [Dialog](https://ui.shadcn.com/docs/components/base/dialog)
 - [Tailwind YT course](https://youtu.be/6biMWgD6_JY)
 - [Tailwind classes](https://tailwind.build/classes)
 - [More Tailwind classes](https://www.tutorialspoint.com/tailwind_css/index.htm)

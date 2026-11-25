@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { PageLayout } from '@/components/layout/PageLayout'
+import { TextBoxSettings } from '@/components/reader/TextBoxSettings'
 import { getMessage } from '@/api/client'
 
 export function SettingsPage() {
@@ -29,7 +30,6 @@ export function SettingsPage() {
             <div className="space-y-4 text-sm text-muted-foreground">
               <section className="space-y-2">
                 <h3 className="text-base font-medium text-primary">── # Saved Themes ──</h3>
-
               </section>
 
               <section className="space-y-2">
@@ -45,14 +45,10 @@ export function SettingsPage() {
         },
       ]}
     >
-      <div className="grid h-full place-items-center border">
-        <div className="text-center">
-          <p className="text-muted-foreground">Settings: Main</p>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {message ?? 'loading…'}
-          </p>
-        </div>
-      </div>
+      {/* display text box settings component from TextBoxSettings.tsx */}
+      <TextBoxSettings />
+      {/* sprint 1 checkpoint, will be moved */}
+      <p className="mx-auto max-w-5xl px-6 pb-2 text-xs text-muted-foreground">backend: {message ?? 'loading…'}</p>
     </PageLayout>
   )
 }
