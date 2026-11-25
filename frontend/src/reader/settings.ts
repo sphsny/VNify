@@ -68,7 +68,7 @@ export const DEFAULT: TextBoxSettings = {
   sceneBackgroundColor: '#121212',
   sceneBackgroundOpacity: 0.5,
 
-  font: 'saira',
+  font: 'maven',
   fontSize: 1.25,
   fontWeight: 400,
   lineHeight: 1.5,
@@ -98,11 +98,14 @@ const STORAGE_KEY = 'vnify-textbox' // local storage key
 // fonts to choose from through @fontsource (imported in index.css)
 // will be adjusted
 export const FONTS = {
-  arimo: { label: 'Arimo', stack: "'Arimo Variable', sans-serif" },
-  shantell: { label: 'Shantell Sans', stack: "'Shantell Sans Variable', cursive" },
-  saira: { label: 'Saira', stack: "'Saira Variable', sans-serif" },
-  quicksand: { label: 'Quicksand', stack: "'Quicksand Variable', sans-serif" },
-  maven: { label: 'Maven Pro', stack: "'Maven Pro Variable', sans-serif" },
+  arimo: { label: 'Arimo', stack: "'Arimo Variable', sans-serif" }, // https://fonts.google.com/specimen/Arimo
+  shantell: { label: 'Shantell Sans', stack: "'Shantell Sans Variable', cursive" }, // https://fonts.google.com/specimen/Shantell+Sans
+  saira: { label: 'Saira', stack: "'Saira Variable', sans-serif" }, // https://fonts.google.com/specimen/Saira
+  quicksand: { label: 'Quicksand', stack: "'Quicksand Variable', sans-serif" }, // https://fonts.google.com/specimen/Quicksand
+  maven: { label: 'Maven Pro', stack: "'Maven Pro Variable', sans-serif" }, // https://fonts.google.com/specimen/Maven+Pro
+  // single weight (400 only), so no Variable suffix in the family name
+  indieFlower: { label: 'Indie Flower', stack: "'Indie Flower', cursive" }, // https://fonts.google.com/specimen/Indie+Flower
+  michroma: { label: 'Michroma', stack: "'Michroma', sans-serif" }, // https://fonts.google.com/specimen/Michroma
 } as const
 
 // for fonts previews

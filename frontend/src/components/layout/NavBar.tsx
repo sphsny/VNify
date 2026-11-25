@@ -19,9 +19,9 @@ export function NavBar() {
   return (
     <header className="shrink-0 border-b border-border">
       <nav className="flex h-16 items-center gap-6 px-12">
-        {/* left: icon (currently place holder from https://www.magnific.com/icon/book_9427901#fromView=search&page=1&position=14&uuid=a492a714-cf0d-43d3-9953-58287c6d8056) */}
-        <div className="flex min-w-0 flex-1 items-center gap-2">
-          <img src={icon} alt="" className="size-8 shrink-0" />
+        {/* custom icon */}
+        <div className="flex min-w-0 flex-1 items-center gap-6">
+          <img src={icon} alt="" className="size-10 shrink-0" />
           <span className="truncate text-xl font-semibold">VNify</span>
         </div>
 
