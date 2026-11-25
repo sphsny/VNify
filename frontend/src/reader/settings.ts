@@ -97,15 +97,28 @@ const STORAGE_KEY = 'vnify-textbox' // local storage key
 
 // fonts to choose from through @fontsource (imported in index.css)
 // will be adjusted
+// single weight fonts have no variable suffix
 export const FONTS = {
   arimo: { label: 'Arimo', stack: "'Arimo Variable', sans-serif" }, // https://fonts.google.com/specimen/Arimo
   shantell: { label: 'Shantell Sans', stack: "'Shantell Sans Variable', cursive" }, // https://fonts.google.com/specimen/Shantell+Sans
   saira: { label: 'Saira', stack: "'Saira Variable', sans-serif" }, // https://fonts.google.com/specimen/Saira
   quicksand: { label: 'Quicksand', stack: "'Quicksand Variable', sans-serif" }, // https://fonts.google.com/specimen/Quicksand
   maven: { label: 'Maven Pro', stack: "'Maven Pro Variable', sans-serif" }, // https://fonts.google.com/specimen/Maven+Pro
-  // single weight (400 only), so no Variable suffix in the family name
   indieFlower: { label: 'Indie Flower', stack: "'Indie Flower', cursive" }, // https://fonts.google.com/specimen/Indie+Flower
-  michroma: { label: 'Michroma', stack: "'Michroma', sans-serif" }, // https://fonts.google.com/specimen/Michroma
+  playpenSans: { label: 'Playpen Sans', stack: "'Playpen Sans Variable', cursive" }, // https://fonts.google.com/specimen/Playpen+Sans
+  craftyGirls: { label: 'Crafty Girls', stack: "'Crafty Girls', cursive" }, // https://fonts.google.com/specimen/Crafty+Girls
+  chilanka: { label: 'Chilanka', stack: "'Chilanka', cursive" }, // https://fonts.google.com/specimen/Chilanka
+  atma: { label: 'Atma', stack: "'Atma', cursive" }, // https://fonts.google.com/specimen/Atma
+  commissioner: { label: 'Commissioner', stack: "'Commissioner Variable', sans-serif" }, // https://fonts.google.com/specimen/Commissioner
+  anekTamil: { label: 'Anek Tamil', stack: "'Anek Tamil Variable', sans-serif" }, // https://fonts.google.com/specimen/Anek+Tamil
+  georama: { label: 'Georama', stack: "'Georama Variable', sans-serif" }, // https://fonts.google.com/specimen/Georama
+  elMessiri: { label: 'El Messiri', stack: "'El Messiri Variable', sans-serif" }, // https://fonts.google.com/specimen/El+Messiri
+  cantarell: { label: 'Cantarell', stack: "'Cantarell', sans-serif" }, // https://fonts.google.com/specimen/Cantarell
+  rajdhani: { label: 'Rajdhani', stack: "'Rajdhani', sans-serif" }, // https://fonts.google.com/specimen/Rajdhani
+  shipporiMincho: { label: 'Shippori Mincho B1', stack: "'Shippori Mincho B1', serif" }, // https://fonts.google.com/specimen/Shippori+Mincho+B1
+  cormorantUpright: { label: 'Cormorant Upright', stack: "'Cormorant Upright', serif" }, // https://fonts.google.com/specimen/Cormorant+Upright
+  tektur: { label: 'Tektur', stack: "'Tektur Variable', sans-serif" }, // https://fonts.google.com/specimen/Tektur
+  dotGothic16: { label: 'DotGothic16', stack: "'DotGothic16', sans-serif" }, // https://fonts.google.com/specimen/DotGothic16
 } as const
 
 // for fonts previews

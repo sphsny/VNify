@@ -30,16 +30,16 @@ The final deliverable is a fully working hosted web application, that allows a u
 
 ## Tech Stack
     
-**Frontend**
+**Frontend**<br>
 [![React][React.js]][React-url] [![TypeScript][TypeScript]][TypeScript-url] [![Vite][Vite]][Vite-url]
 
-**Backend**
+**Backend**<br>
 [![Python][Python]][Python-url] [![FastAPI][FastAPI]][FastAPI-url]
 
-**Storage**
+**Storage**<br>
 [![IndexedDB][IndexedDB]][IndexedDB-url]
 
-**Testing & Tooling**
+**Testing & Tooling**<br>
 [![Vitest][Vitest]][Vitest-url] [![Pytest][Pytest]][Pytest-url] [![GitHub Actions][GitHubActions]][GitHubActions-url]
 
 <!-- Frontend -->
